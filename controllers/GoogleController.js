@@ -6,6 +6,6 @@ module.exports = {
 
         axios.get("https://www.googleapis.com/books/v1/volumes", {
             params
-        }).then(results => console.log(results))
+        }).then(results => res.json(results.data.items))
     }
 }
