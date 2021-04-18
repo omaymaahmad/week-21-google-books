@@ -1,10 +1,26 @@
-import React from 'react';
+import React from 'react'
 
-
-
-function SavedPage () {
-    return (
-       <h1>Saved Page</h1>
-    )
+class SavedBooks extends React.Component {
+state = {
+    books: [],
+  };
+  componentDidMount() {
+    return;
+  }
+  getDatabaseBooks = () => {
+    return;
+  };
+  deleteBookFromDatabase = (bookId) => {
+    return;
+  };
+  render() {
+      return (
+   <>
+        <h1>Saved Page</h1>
+        <p>View or Remove your Saved Books</p>
+       </>
+      )
+  }
 }
-export default SavedPage;
+export default SavedBooks;
+

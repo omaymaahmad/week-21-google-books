@@ -1,4 +1,3 @@
-# week-21-google-books
 # Google Books Search
 
 ### Overview

@@ -1,5 +1,4 @@
 import axios from "axios";
-
 export default {
     //Hit the google api end point and search for the users input
     getGoogleBooksSearch: function(bookTitle){

@@ -1,28 +1,30 @@
-//Requiring in packages
+//Require in packages express, mongoose, cors
 const express = require("express");
-const mongoose = require("mongoose");
-const cors = require("cors")
+const cors = require("cors");
+const mongoose = require("mongoose")
 const routes = require("./routes")
+//Set up our PORT
+const PORT = process.env.PORT || 3001;
 //Set up express server
 const app = express();
 app.use(express.urlencoded({extended: true}));
-app.use(express.json());
-app.use(cors); 
-app.use(routes);
-//Assign PORT value
-const PORT = process.env.PORT || 3001
-
-//Set up serving of static assets from build in client qwhen in production
+app.use(express.json())
+app.use(cors());
+//Set up serving of static assets from the client
 if(process.env.NODE_ENV === "production"){
     app.use(express.static("client/build"))
 }
-
-//Connect to Mongo DB 
-mongoose.connect(process.env.MONGO_URI || "mongodb://localhost:27017/googlebooks", {
-    useCreateIndex: true,useNewUrlParser: true, useUnifiedTopology:true
+//Add our routes to the server
+app.use(routes);
+//Connect to db using mongoose
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/googlebooks",
+{
+    useCreateIndex: true,
+    useNewUrlParser: true,
+    useUnifiedTopology: true
 })
+//set up the app to listen on the PORT
 
-//Start the server
 app.listen(PORT, () => {
-    console.log("Connected on port:" + PORT)
+    console.log("App Listening on PORT" + PORT)
 })

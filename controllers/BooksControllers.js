@@ -1,4 +1,5 @@
-const dbBooks = require("../models/book");
+const dbBooks = require("../models/bookSchema");
+
 module.exports = {
     findAll: function(req, res) {
       dbBooks.Book
@@ -33,3 +34,4 @@ module.exports = {
         .catch(err => res.status(422).json(err));
     }
   };
+  
