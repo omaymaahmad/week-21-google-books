@@ -28,7 +28,7 @@ state = {
         {this.state.books.length ? (
           this.state.books.map((book) => (
             <BooksCards
-            key={book.id}
+            key={book._id}
             title={book.title}
             description={book.description}
             // image={book.volumnInfo.imageLinks.thumbnail}
@@ -36,7 +36,7 @@ state = {
             Button={() => (
               <button
               onClick={() => {
-                this.deleteBookFromDatabase(book.id);
+                this.deleteBookFromDatabase(book._id);
               }}
               >
                 Delete
