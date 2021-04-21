@@ -28,7 +28,7 @@ API.saveBook({
   googleId: book.id,
   title: book.volumeInfo.title,
   description: book.volumeInfo.description,
-  image: "image placeholder",
+  image: book.volumeInfo.imageLinks.thumbnail,
   authors: book.volumeInfo.authors,
   link: book.volumeInfo.infoLink,
 }).then(() => this.getBooksFromGoogleAPI())
@@ -57,8 +57,9 @@ API.saveBook({
             <BooksCards
             key={book.id}
             title={book.volumeInfo.title}
+            authors={book.volumeInfo.authors.join(", ")}
             description={book.volumeInfo.description}
-            // image={book.volumnInfo.imageLinks.thumbnail}
+            image={book.volumeInfo.imageLinks.thumbnail}
             link={book.volumeInfo.infoLink}
             Button={() => (
               <button

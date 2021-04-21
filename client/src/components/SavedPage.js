@@ -30,9 +30,10 @@ state = {
             <BooksCards
             key={book._id}
             title={book.title}
+            authors={book.authors.join(", ")}
             description={book.description}
-            // image={book.volumnInfo.imageLinks.thumbnail}
-            link={book.infoLink}
+            image={book.image}
+            link={book.link}
             Button={() => (
               <button
               onClick={() => {
