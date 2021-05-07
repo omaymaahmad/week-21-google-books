@@ -12,7 +12,7 @@ function UserSearch({ q, handleSearch, handleUserInput }) {
           onChange={handleUserInput}
           className="searchTerm"
         />
-        <button onClick={handleSearch} type="submit" className="searchButton">
+        <button onClick={handleSearch} type="submit" id="searchButton">
           Search
         </button>
       </div>

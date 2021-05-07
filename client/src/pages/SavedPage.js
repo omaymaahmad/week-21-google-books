@@ -1,6 +1,7 @@
 import React from "react";
 import API from "../utils/ApiCalls";
 import BooksCards from "../components/BooksCards";
+import "../styles/SavedPage.css";
 
 class SavedBooks extends React.Component {
   state = {
@@ -23,8 +24,10 @@ class SavedBooks extends React.Component {
   render() {
     return (
       <>
-        <h1>Saved Page</h1>
-        <p>View or Remove your Saved Books</p>
+        <div className="savedHeader">
+          <h4>View or Remove your Saved Books</h4>
+        </div>
+
         {this.state.books.length ? (
           this.state.books.map((book) => (
             <BooksCards

@@ -58,6 +58,7 @@ class SearchPage extends React.Component {
               link={book.volumeInfo.infoLink}
               Button={() => (
                 <button
+                  id="saveButton"
                   onClick={() => {
                     this.saveBookFromDatabase(book.id);
                   }}
