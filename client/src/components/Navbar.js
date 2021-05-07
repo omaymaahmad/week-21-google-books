@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-class Header extends Component {
+class NavBar extends Component {
   render() {
     return (
       <>
-        <Navbar bg="primary" variant="dark">
+        <Navbar bg="light" variant="light">
           <Navbar.Brand href="#home">Google Books</Navbar.Brand>
           <Nav className="mr-auto">
             <Nav.Link>
@@ -25,4 +25,4 @@ class Header extends Component {
     );
   }
 }
-export default Header;
+export default NavBar;
