@@ -2,6 +2,7 @@ import React from "react";
 import UserSearch from "../components/UserSearch";
 import BooksCards from "../components/BooksCards";
 import API from "../utils/ApiCalls";
+import "../styles/SearchPage.css";
 
 class SearchPage extends React.Component {
   state = {
@@ -41,9 +42,6 @@ class SearchPage extends React.Component {
   render() {
     return (
       <>
-        <h1>Search For Books</h1>
-        <p>Search for books below and save whatever you want</p>
-
         <UserSearch
           q={this.state.q}
           handleSearch={this.handleSearch}
@@ -70,7 +68,9 @@ class SearchPage extends React.Component {
             />
           ))
         ) : (
-          <p>You need to search for a book</p>
+          <div className="elseStatement">
+            <p>You need to search for a book</p>
+          </div>
         )}
       </>
     );

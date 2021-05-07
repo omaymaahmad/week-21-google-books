@@ -1,0 +1,22 @@
+.searchButton {
+  width: 100px;
+  height: 36px;
+  border: 1px solid #fcd359;
+  background: #fcd359;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap {
+  width: 30%;
+  position: relative;
+  padding-top: 10%;
+  padding-left: 7%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
